@@ -25,6 +25,10 @@ async function runDB() {
     // пингуем
     // await myMongoClient.db("users").command({ ping: 1 });
     console.log("✅ База данных готова к работе!");
+
+    app.listen(port, () => {
+      console.log(`✅ Порт сервера: ${port}`);
+    });
   } catch (error) {
     console.log("❌ Не могу подключиться к базе данных!");
     console.log("Ошибка:", error.message); // причина
