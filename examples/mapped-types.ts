@@ -36,7 +36,7 @@ type newUser2 = OptionalType<User>;
 
 // тип утилита, который создает новый тип с исключением свойств (Exclude) или null значениями (| null)!
 type WithoutId<T> = {
-  [Key in keyof T as Exclude<Key, "id">]: T[Key] | null
+  [Key in keyof T as Exclude<Key, "id">]: T[Key] | null;
 };
 
 type newUser3 = WithoutId<User>;
